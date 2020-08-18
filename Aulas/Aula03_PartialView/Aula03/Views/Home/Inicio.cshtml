@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Inicio</title>
+</head>
+<body>
+    <h4>Inicio</h4>
+    <p>Valor: @ViewData["valor"]</p>
+   
+    <!--Passar o valor para 200-->
+    @{
+        ViewData["valor"] = 200;
+    }
+    <p>O valor agora é @ViewData["valor"]</p>
+</body>
+</html>

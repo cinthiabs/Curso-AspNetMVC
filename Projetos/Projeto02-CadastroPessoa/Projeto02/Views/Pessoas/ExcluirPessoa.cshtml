@@ -1,0 +1,51 @@
+﻿@model Projeto02.Models.Pessoa
+
+@{
+    ViewData["Title"] = "ExcluirPessoa";
+}
+
+<h2>Excluir Cadastro</h2>
+
+<h3>Voce tem Certeza que deseja Excluir?</h3>
+<div>
+    <h4>Excluir dados do cadastro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sobrenome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sobrenome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Idade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Idade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+    </dl>
+    
+    <form asp-action="ExcluirPessoa">
+        <input type="hidden" asp-for="PessoaId" />
+        <input type="submit" value="Excluir" class="btn btn-primary" /> |
+        <a asp-action="Index">Voltar</a>
+    </form>
+</div>

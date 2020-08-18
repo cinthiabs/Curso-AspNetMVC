@@ -1,0 +1,48 @@
+﻿@model IEnumerable<AulaFaixaEtaria.Models.Pessoa>
+
+@if (Model.Any(comparacao => comparacao.Idade > 60))
+{
+    <div class="panel panel-primary">
+
+        <!--model.count mostra a quantidade de registros Adolescentes no banco de dados-->
+        <div class="panel-heading"> Quantidade de Idosos Cadastrados  @Model.Count(comparacao => comparacao.Idade > 60)</div>
+
+        <div class="panel-body">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Idade)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        @if (item.Idade > 60)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Nome)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Idade)
+                                </td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.PessoaId" class="btn btn-success">Editar</a> |
+                                    <a asp-action="Details" asp-route-id="@item.PessoaId" class="btn btn-info">Detalhs</a> |
+                                    <a asp-action="Delete" asp-route-id="@item.PessoaId" class="btn btn-danger">Deletar</a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}

@@ -1,0 +1,19 @@
+﻿@model IEnumerable<AulaFaixaEtaria.Models.Pessoa>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3 class="title">Criar novo cadastro</h3>
+
+<p>
+     <a asp-action="Create" class="btn btn-primary">Novo Cadastro</a>
+</p>
+<hr />
+<!-- mostra a tabela de Adolescentes com a faixa etaria correspondente-->
+
+@await Html.PartialAsync("_Adolescentes", Model)
+@await Html.PartialAsync("_Adultos", Model)
+@await Html.PartialAsync("_Idosos", Model)
+
+<!--<partial name ="_Idosos" model="Model"     OUTRA OPCAO DE ADICIONAR A PARCIAL-->

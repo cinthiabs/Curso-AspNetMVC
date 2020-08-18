@@ -1,0 +1,27 @@
+﻿@model Aula02.ViewModels.Cliente
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <!--Adicioando a ViewModel-->
+    <p>Nome: @Model.Nome</p>
+    <p>Apelido: @Model.Apelido</p>
+    <p>Telefone: @Model.Telefone</p>
+
+    <hr />
+
+    <h2>Menu Inicial</h2>
+    <a asp-action="pag1">Pagina 01</a><br />
+    <a asp-action="pag2">Pagina 02</a> <br />
+    <a asp-action="pag3">Pagina 03</a><br />
+
+</body>
+</html>

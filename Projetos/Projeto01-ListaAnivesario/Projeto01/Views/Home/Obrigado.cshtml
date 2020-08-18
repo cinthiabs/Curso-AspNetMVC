@@ -1,0 +1,20 @@
+﻿@model Projeto01.Models.RespostaConvidados
+
+@{
+    ViewData["Title"] = "Obrigado";
+}
+
+<p>Obrigado pelo seu registro, @Model.Nome .</p> <!--pegando o nome do usuario-->
+
+@if (Model.Presente == true)
+{
+    <p>ficarei a espera da sua presença</p>
+}
+else
+{
+    <p>Que pena!</p>
+}
+
+<div>
+<p>Clique <a asp-action="ListaConvidados">AQUI</a>  para ver a lista de convidados </p>
+</div>

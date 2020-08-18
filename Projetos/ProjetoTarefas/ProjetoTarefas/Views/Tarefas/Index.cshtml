@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ProjetoTarefas.Models.Tarefas>
+
+@{
+    ViewData["Title"] = "Lista de Tarefas";
+}
+
+<h2>Lista de Tarefas</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-info">Criar Agora</a>
+</p>
+<table class="table table-hover container">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descrica)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inicio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Importancia)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descrica)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Inicio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Importancia)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TarefasId" class="btn btn-success">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.TarefasId" class="btn btn-info">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.TarefasId" class="btn btn-danger">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

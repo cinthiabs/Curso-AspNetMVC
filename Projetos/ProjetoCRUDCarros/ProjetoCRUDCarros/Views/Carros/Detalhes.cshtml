@@ -1,0 +1,13 @@
+﻿@model ProjetoCRUDCarros.Models.Carro
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+<div class="row">
+    <!--mostrando as informaçções-->
+    <p><strong>Marca:</strong>  @Html.DisplayFor(model => model.Marca) </p>
+    <p><strong>Nome:</strong> @Html.DisplayFor(model => model.Nome) </p>
+    <p><strong>Ano:</strong> @Html.DisplayFor(model => model.Ano) </p>
+</div>
+<a asp-action="Index" class="btn btn-link">Voltar</a>
