@@ -12551,11 +12551,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cinth\\Desktop\\PROGRAMAÇÃO\\C#\\ASP.NET\\ProjetoMoeda\\ProjetoMoeda\\ProjetoMoeda.csproj",
+      "projectUniqueName": "C:\\Users\\cinth\\Desktop\\PROGRAMAÇÃO\\C#\\ASP.NET MVC\\Projetos\\ProjetoMoeda\\ProjetoMoeda\\ProjetoMoeda.csproj",
       "projectName": "ProjetoMoeda",
-      "projectPath": "C:\\Users\\cinth\\Desktop\\PROGRAMAÇÃO\\C#\\ASP.NET\\ProjetoMoeda\\ProjetoMoeda\\ProjetoMoeda.csproj",
+      "projectPath": "C:\\Users\\cinth\\Desktop\\PROGRAMAÇÃO\\C#\\ASP.NET MVC\\Projetos\\ProjetoMoeda\\ProjetoMoeda\\ProjetoMoeda.csproj",
       "packagesPath": "C:\\Users\\cinth\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cinth\\Desktop\\PROGRAMAÇÃO\\C#\\ASP.NET\\ProjetoMoeda\\ProjetoMoeda\\obj\\",
+      "outputPath": "C:\\Users\\cinth\\Desktop\\PROGRAMAÇÃO\\C#\\ASP.NET MVC\\Projetos\\ProjetoMoeda\\ProjetoMoeda\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
